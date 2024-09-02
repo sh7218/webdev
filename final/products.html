@@ -8,26 +8,39 @@ You can have a minimum of 2 products. -->
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Fashion Shop - Shopping Cart</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
     <link rel="stylesheet" href="styles/styles.css">
-  </head>
-  <body>
-     <header>
-          <h1>Fashion Shop</h1>         
-     </header>       
-        <nav>
-              <a href="index.html">HOME</a>
-              <a href="products.html">SHOP</a>
-              <a href="contact.html">CONTACT</a>
-              <a href="#">LOGIN</a>
-              <a href="#">SEARCH</a>         
-        </nav>
+    <title>Web Page</title>
+    <link rel="icon" type="image/x-icon" href="img_index/homeicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap">
+</head>
+
+<body>
+
+<div style="overflow: hidden; text-align: center; background: #fff0db; color: #dbd7ce; display: flex; justify-content: space-between; align-items: center; margin-left: 35%;">
+  <h1  style="color: black; padding-bottom: 30px; padding-top: 10px; flex-grow: 1;">Pure Adorn</h1>
+  <div style="flex-grow: 1;">
+    <a href="https://twitter.com/" class="links"><img src="img_index/twt.png" height="20" width="20"></a>
+    <a href="https://www.facebook.com/" class="links"><img src="img_index/fb.png" height="20" width="20"></a>
+    <a href="https://www.instagram.com/" class="links"><img src="img_index/ig.png" height="20" width="20"></a>
+    <a href="https://www.linkedin.com/feed/" class="links"><img src="img_index/linkedin.png" height="20" width="20"></a>
+  </div>
+</div>
+
+<div class="nav1">
+    <a href="index.html" class="links">Home</a>
+    <a href="search.html" class="links">Search</a>
+    <a href="login.html" class="links">Login</a>
+    <a href="register.html" class="links">Register</a>
+    <a href="products.html" class="links">Shop Now!</a>
+    <a href="contact.html" class="links">Contact Us</a>
+</div>
 	<main>
-        <h2>Exclusive Jewelry Selection</h2>
-        	<div class="container">
+		<br><br>
+		<div class="container">
+        	<h2>Exclusive Jewelry Selection</h2>
 			    <form action="products.php" method="post" novalidate>
 			          <div class="product-container"> 
 					        <div class="product-item">
@@ -221,10 +234,9 @@ You can have a minimum of 2 products. -->
     </main>
 
     <script src="products.js"></script>
-   <footer>
-        Footer <br>
-        &copy; 2023 Fashion Shop
-    </footer>
+	<div class="footer" style="color: black;">
+	    Copyright <code>  &#169; </code> 2023. All rights reserved.
+	</div>
 
   </body>
 </html>

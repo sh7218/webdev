@@ -5,12 +5,37 @@ Dec 16, 2023 -->
 
 <!-- products.php (we will go over the details during next week): This product form should be connected to products.php script to store all the values from the products form such as name, email, phone, credit card and address into a clients.txt file. It should also send a thank you for their purchase. -->
 
-<HTML>
-    <head>
-    <title>Fashion Shop - PHP</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    </head>
-    <body>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Web Page</title>
+    <link rel="icon" type="image/x-icon" href="img_index/homeicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap">
+</head>
+
+<body>
+
+<div style="overflow: hidden; text-align: center; background: #fff0db; color: #dbd7ce; display: flex; justify-content: space-between; align-items: center; margin-left: 35%;">
+  <h1  style="color: black; padding-bottom: 30px; padding-top: 10px; flex-grow: 1;">Pure Adorn</h1>
+  <div style="flex-grow: 1;">
+    <a href="https://twitter.com/" class="links"><img src="img_index/twt.png" height="20" width="20"></a>
+    <a href="https://www.facebook.com/" class="links"><img src="img_index/fb.png" height="20" width="20"></a>
+    <a href="https://www.instagram.com/" class="links"><img src="img_index/ig.png" height="20" width="20"></a>
+    <a href="https://www.linkedin.com/feed/" class="links"><img src="img_index/linkedin.png" height="20" width="20"></a>
+  </div>
+</div>
+
+<div class="nav1">
+    <a href="index.html" class="links">Home</a>
+    <a href="search.html" class="links">Search</a>
+    <a href="login.html" class="links">Login</a>
+    <a href="register.html" class="links">Register</a>
+    <a href="products.html" class="links">Shop Now!</a>
+    <a href="contact.html" class="links">Contact Us</a>
+</div>
     <?php
     // Check if the form is submitted
     if (!empty($_POST)) {
