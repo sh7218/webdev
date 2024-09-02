@@ -1,0 +1,72 @@
+<!-- Web Development and Programming (CSCI-UA 61) - 001 
+Assignment 7 
+Subi Hwang  
+Dec 03, 2023 -->
+
+<!-- onlinestore.html -->
+
+<!-- A simple OnlineStore form: Create an HTML form onlinestore.html-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Subi Hwang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+     <header>
+          <h1>Web Development and Programming</h1>         
+     </header>       
+       <nav>        
+              <a href="../index.html">Home</a>
+              <a href="../contact.html">Contact</a>
+              <a href="../asg2">Assignment #2</a>
+              <a href="../asg3">Assignment #3</a>
+              <a href="../asg4">Assignment #4</a>
+              <a href="../asg5"> Assignment #5 </a>
+              <a href="../asg5/products.html"> Products </a>
+              <a href="../asg6/index.html"> Assignment #6 </a>
+              <a href="../asg6/jQweb/index.html"> Animal Crossing </a>
+              <a href="index.html"> Assignment #7 </a>
+              <a href="../final/products.html"> Final Project</a>
+        </nav>
+    <main>
+
+        <h2>Online Store</h2>
+        <img src='images/nook.png' width=200 height=200 id=nook>
+        <!-- Connect the form (onlinestore.html) to an online.php program to extracts all of the values and show a nicely formatted HTML page that will serve as a receipt. -->
+
+        <form action="online.php" method="post">
+            
+        <!-- with the following elements:
+        Name
+        Email
+        List of two products that the user can buy [using a select menu]
+        How many items of the product the user wishes to buy?
+        using <input type="number">
+        Submit button
+        Reset button -->
+
+        <p>Name: <input type="text" name="name" /></p>
+        <p>Email: <input type="email" name="email" /></p>
+        <p>Product:
+            <select name="product">
+                <option value="Cherry">Cherry ($10)</option>
+                <option value="Coconut">Coconut ($20)</option>
+            </select>
+        </p>
+        <p>Quantity: <input type="number" name="quantity" min="1" /></p>
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+        </form>
+    </main>
+  
+   <footer style = "margin-top: 60px;">
+        Footer <br>
+        &copy; 2023 Subi Hwang
+    </footer>
+
+  </body>
+</html>

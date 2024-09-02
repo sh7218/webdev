@@ -1,0 +1,71 @@
+<!-- Web Development and Programming (CSCI-UA 61) - 001 
+Assignment 3
+Subi Hwang
+Oct 8, 2023 -->
+
+<!-- HTML and CSS Requirements (10%):
+ 
+Create a folder for this assignment called asg2.  Create an index.html inside this folder.
+This index.html should have responsive header, footer, navigation similar to assignment #1.
+Make sure to include a responsive external .css similar to assignment # 1 (you can even use the same .css file as you used for assignment #1.
+Link to this assignment from the main index.html which you created for assignment 1.
+The link would be as follow: <a href=”asg2”>assignment # 2</a>
+Make sure to place all files related to this assignment inside the asg2 folder. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Subi Hwang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+     <header>
+          <h1>Web Development and Programming</h1>         
+     </header>       
+          <nav>      	
+              <a href="../index.html">Home</a>
+              <a href="../contact.html">Contact</a> <!-- part of Assignment #1 -->
+              <a href="../asg2/index.html">Assignment #2</a>
+              <a href="index.html">Assignment #3</a>
+              <a href="../asg4/index.html">Assignment #4</a>
+              <a href="../asg5/index.html"> Assignment #5 </a>
+              <a href="../asg5/products.html"> Products </a>
+              <a href="../asg6/index.html"> Assignment #6 </a>
+              <a href="../asg6/jQweb/index.html"> Animal Crossing </a>
+              <a href="../asg7/index.html"> Assignment #7 </a>
+        </nav>
+    
+	<main>
+      <h2>Random Sweets For You</h2>
+     <!-- The user will click on a button to select a prize randomly using a math random method.     -->
+     <button onclick="randArray()"> click to win a prize </button>
+      <p>
+      <hr>
+
+      <h2>Click on the Browser reload button to get a new  new random image loaded in the browser.</h2>
+      <!-- Make sure to have one image displayed on the page -->
+      <img src='paris.jpeg' width=200 height=200 id=imgone>
+      <hr>
+
+      <h2> Click to start or stop slideshow:</h2>
+
+      <!-- You should have one images inside your HTML page with a unique id: id="img1". -->
+      <img src="cat1.jpeg" height="200" width=200 id="img1">
+      <p>
+
+      <button onclick="start()">start </button>
+      <button onclick="stop()">stop </button>
+
+    </main>
+
+    <script src="asg3.js"></script>
+  
+   <footer>
+        Footer <br>
+        &copy; 2023 Subi Hwang
+    </footer>
+
+  </body>
+</html>

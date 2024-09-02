@@ -1,0 +1,200 @@
+/*Web Development and Programming (CSCI-UA 61) - 001 
+Assignment 1
+Subi Hwang
+Sep 17, 2023 
+*/
+
+/*3) (30% of the grade) Create at least one external CSS file (styles.css) 
+making sure all content is Responsive (flexible design to make sure all content is visible from 
+all screen sizes):
+Make sure to link all your html pages to this external styles.css files 
+to design all your web pages for this class (You can use more .css files if you want, but one is enough).
+
+ Use the .css responsive tags: Make sure that the design is all responsive including the header, footer, 
+ navigational menu and content. The design of all the webpages for this class including this assignment 
+ should include similar design identity using an external css file called (styles.css). You can use several
+ .css external files or internal CSS as well, but I’m only requiring one external CSS file styles.css.
+
+Each of the HTML pages should load a visually pleasing design that should work across screen sizes 
+(progressive design) from an external CSS file main.css. The website should also adhere to modern 
+CSS conventions: Use a CSS-based, rather than table-based, layout! */
+ 
+/*Make sure to also use float, background, margin, width, padding, color, font-family, position, border, 
+font-size, and align properties.*/
+
+/*Make sure to use a class and ID selectors as well.
+You should also create a responsive navigation menu with a hover effect and styles for
+Use the Homepage (index.html and the styles.css as a template for all your assignments for this class):
+After testing your home page (index.html) along with the styles.css making sure it looks wonderful, 
+you can use these two files as a template to create other webpage for this assignment and also other 
+assignments for this class. This will make it easy on you to focus on the program and not the design 
+for the remaining assignments.*/
+
+/*referred to the class example provided in the assignment instruction*/
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  position: static;
+  font-family: Arial;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Style the Header */
+header {
+  padding: 30px;
+  text-align: center;
+  background: #FFC0CB;
+  color: white;
+}
+
+/* Style the top navigation bar */
+nav {
+  display: flex;
+  background-color: #D8BFD8;
+}
+
+/* Style the navigation bar links */
+nav a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Change color on hover */
+nav a:hover {
+  background-color: #FFC0CB;
+  color: black;
+}
+
+
+img{
+  width: 100%; 
+  height: auto;
+  display: block;
+ }
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Main column */
+main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Footer */
+footer {
+  padding: 5px;
+  text-align: center;
+  background: #ddd;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  color: #0099FF;
+}
+
+#reset, #submit{
+	font-size: 14px;
+}
+
+input[type=reset] {
+  background-color: #DB7093;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=reset]:hover {
+  background-color: #F3CFC6;
+}
+
+input[type=submit] {
+  background-color: #DB7093;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #F3CFC6;
+}
+
+
+.container {
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-50 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, 
+make the two columns stack on top of each other instead of next to 
+each other */
+
+/*You should use at least one @media query for responsive web design for header, footer, navigational menu, 
+p, div, h1… h6, all the form elements such as input, label, radio, checkbox, select, textarea and so on.
+You can use any flexible and responsive layout such as flexbox or CSS grid or both for the layout for your 
+site.*/
+
+@media screen and (max-width: 600px) {
+	header,footer {
+		font-size: 12px;
+}
+
+  .col-25, .col-50, input[type=reset], input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+
+  }
+  .row, nav {   
+    flex-direction: column;
+  }
+
+}
+
+
+

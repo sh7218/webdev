@@ -1,0 +1,209 @@
+<!-- Web Development and Programming (CSCI-UA 61) - 001 
+Assignment 1
+Subi Hwang
+Sep 17, 2023 -->
+
+<!-- 2) (35% of the grade) Create an HTML form web page (contact.html) to collect information/data from the user. This webpage should have a similar design and navigational menu as the index.html. -->
+
+<!-- Make sure that all class webpages for this assignment and also future assignments include the following requirements so all your work can serve as a portfolio with a cohesive design and content:
+Please note that all webpages/assignments for this class should include the following responsive elements such as images, headers, footer and navigational menu-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Subi Hwang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+  	<!-- Header: Create a responsive long, horizontal header that displays the title of the page such as ‘Web Development 2023’ or ‘Contact US” or “Assignment #1” along the top of the page with any background color you like. -->
+  	 <header>
+          <h1>Web Development and Programming</h1>
+    </header>
+          <!-- A responsive navigation menu which should be used for all the pages on the website. The menu can include home(index.html), contact (which is the form), and can include links to assignment 2, and assignment 3. It’s ok not to have a working links from the navigational menu for Assignment 2 and 3 as you will work on that later on in the semester.  The links that should be working for this assignment are home(index.html), and contact (which is the form). --> 
+
+          <nav>
+              <a href="index.html">Home</a>
+              <a href="contact.html">Contact</a>
+              <a href="asg2/index.html">Assignment #2</a>
+              <a href="asg3/index.html">Assignment #3</a>  
+              <a href="asg4/index.html">Assignment #4</a>   
+              <a href="asg5/index.html"> Assignment #5 </a>
+              <a href="asg5/products.html"> Products </a> 
+              <a href="asg6/index.html"> Assignment #6 </a>
+              <a href="asg6/jQweb/index.html"> Animal Crossing </a>
+              <a href="asg7/index.html"> Assignment #7 </a>
+        </nav>
+    
+	<main>
+
+   <h2>Contact Us</h2>
+
+	<p> Please enter your information below to contact us: </p>
+
+	<div class="container">
+
+	<!-- Contact.html should include a responsive form with at least 6 form elements such as input, date, select, radio, checkbox, and textarea.
+	Make sure to link this form to the external styles.css which should have progressive design for form elements of the form used here. -->
+
+	<!-- Form elements that I used: input, text, radio, select, date, checkbox, email, textarea reset, and submit -->
+ 	 <form action="#">
+
+ 	 <div class="row">
+
+   	 	<div class="col-25">
+     		<label for="firstname">First Name</label>
+   		 </div>
+
+   		 <div class="col-50">
+    	 	<input type="text" id="firstname" name="firstname" placeholder="Your fist name..">
+   		 </div>
+
+     </div>
+
+  	 <div class="row">
+
+    	<div class="col-25">
+      		<label for="middlename">Middle Name</label>
+    	</div>
+
+    	<div class="col-50">
+      		<input type="text" id="middlename" name="middlename" placeholder="Your middle name.. (skip if you don't have one)">
+    	</div>
+  	</div>
+
+  	 <div class="row">
+
+    	<div class="col-25">
+      		<label for="lname">Last Name</label>
+    	</div>
+
+    	<div class="col-50">
+      		<input type="text" id="lastname" name="lastname" placeholder="Your last name..">
+    	</div>
+  	</div>
+
+    	 <div class="row">
+
+    	<div class="col-25">
+      		<label>Gender</label><br>
+    	</div>
+
+    	<div class="col-50">
+      		<input type="radio" id="male" name="gender" value="male">
+			<label for="male">Male</label><br>
+
+			<input type="radio" id="female" name="gender" value="female">
+			<label for="female">Female</label><br>
+
+			<input type="radio" id="other" name="gender" value="other">
+			<label for="other">Other</label><br>
+    	</div>
+  	</div>
+
+  	<div class="row">
+    	<div class="col-25">
+      		<label for="country">Country</label>
+    	</div>
+
+    	<div class="col-50">
+      		<select id="country" name="country">
+        		
+        		<option value="usa">United States</option>
+        		<option value="canada">Canada</option>
+        		<option value="australia">Australia</option>
+				<option value="australia">Germany</option>
+       			<option value="canada">France</option>
+        		<option value="usa">Spain</option>
+        		<option value="australia">Japan</option>
+       			<option value="canada">South Korea</option>
+        		<option value="usa">Brazil</option>
+        		<option value="australia">Mexico</option>
+       			<option value="canada">India</option>
+        		<option value="usa">China</option>
+        		<option value="australia">South Africa</option>
+       			<option value="canada">Russia</option>
+        		<option value="usa">Argentina</option>
+        		<option value="australia">Italy</option>
+       			<option value="canada">Netherlands</option>
+        		<option value="usa">Sweden</option>
+        		<option value="usa">Switzerland</option><br><br>
+
+      		</select>
+    	</div>
+
+    </div>	
+		<div class="row">
+    		<div class="col-25">
+      			<label for="birthdate">Date of Birth</label>
+    		</div>
+ 	
+ 			<div class="col-50">
+			  	<input type="date" id="birthdate" name="birthdate"><br><br>
+    		</div>
+    	</div>
+    	 <div class="row">
+
+    		<div class="col-25">
+      			<label for="preferredcontact">Preferred Contact Method</label>
+    		</div>
+
+    		<div class="col-50">
+    			<input type="checkbox" id="email" name="email" value="email">
+  				<label for="email"> Email</label><br>
+
+      			<input type="checkbox" id="Phone" name="Phone" value="Phone">
+  				<label for="Phone"> Phone call</label><br>
+  
+  				<input type="checkbox" id="Mailing" name="Mailing" value="Mailing">
+  				<label for="Mailing"> Mailing</label><br>
+ 
+ 				<input type="checkbox" id="SNS" name="SNS" value="SNS">
+  				<label for="SNS"> SNS</label><br>
+  
+ 				<input type="checkbox" id="pushnotifications" name="pushnotifications" value="pushnotifications">
+   				<label for="pushnotifications"> Push notifications</label><br>
+
+    		</div>
+  		</div>
+  	<div class="row">
+  			<div class="col-25">
+      			<label for="email">Email</label>
+    		</div>
+ 	
+ 			<div class="col-50">
+			  	<input type="email" id="email" name="email" value="address@example.com"><br><br>
+    		</div>
+    </div>		
+	  <div class="row">
+
+	    <div class="col-25">
+	      <label for="subject">Contact Info</label>
+	    </div>
+	    
+	    <div class="col-50">
+	      <textarea id="contactinfo" name="contactinfo" placeholder="Please provide contact information that you have chosen above (skip if you only chose email)." style="height:200px"></textarea>
+	    </div>
+
+	  </div> 
+
+	  <div class="row">
+
+ 		<input type="reset" id="reset" name="reset" value="Reset">
+	    <input type="submit" id="submit" name="submit" value="Submit">
+	  </div>
+
+  	 </form>
+
+	</div>
+
+    </main>
+    <!-- Footer: A long, responsive horizontal footer that displays “© 2023 YOUR NAME” along the bottom of every webpage with any background color you like. -->
+   <footer>
+        Footer <br>
+        &copy; 2023 Subi Hwang
+    </footer>
+
+  </body>
+</html>

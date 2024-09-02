@@ -1,0 +1,158 @@
+/*Web Development and Programming (CSCI-UA 61) - 001 
+Assignment 4
+Subi Hwang
+Oct 29, 2023 
+*/
+
+/*Make sure to include a responsive external .css similar to assignment # 1 
+(you can even use the same .css file as you used for assignment #1.*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: static;
+  font-family: Arial;
+  font-size: 16px;
+  margin: 0;
+}
+
+header {
+  padding: 30px;
+  text-align: center;
+  background: #FFC0CB;
+  color: white;
+}
+
+nav {
+  display: flex;
+  background-color: #D8BFD8;
+}
+
+nav a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: #FFC0CB;
+  color: black;
+}
+
+
+figure > img{
+  width: 100%; 
+  height: auto;
+  display: block;
+ }
+
+
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+footer {
+  padding: 5px;
+  text-align: center;
+  background: #ddd;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  color: #0099FF;
+}
+
+#reset, #submit{
+	font-size: 14px;
+}
+
+input[type=reset] {
+  background-color: #DB7093;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=reset]:hover {
+  background-color: #F3CFC6;
+}
+
+input[type=submit] {
+  background-color: #DB7093;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #F3CFC6;
+}
+
+
+.container {
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-50 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+	header,footer {
+		font-size: 12px;
+}
+
+  .col-25, .col-50, input[type=reset], input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+
+  }
+  .row, nav {   
+    flex-direction: column;
+  }
+
+}
+
+
+

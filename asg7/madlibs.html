@@ -1,0 +1,74 @@
+<!-- Web Development and Programming (CSCI-UA 61) - 001 
+Assignment 7 
+Subi Hwang  
+Dec 03, 2023 --> 
+
+<!-- madlibs.html -->
+
+<!-- MadLibs Application: 
+Mad Libs (a play on ad lib, from Latin ad libitum - as you wish).  It’s a word game where one player prompts another for a list of words to substitute for blanks in a story; these word substitutions have a humorous effect when the resulting story is then read aloud.
+ 
+Create an HTML page called madlibs.html with a form that contains eight input fields. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Subi Hwang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+     <header>
+          <h1>Web Development and Programming</h1>
+     </header>       
+          <nav>      	
+              <a href="../index.html">Home</a>
+              <a href="../contact.html">Contact</a>
+              <a href="../asg2">Assignment #2</a>
+              <a href="../asg3">Assignment #3</a>
+              <a href="../asg4">Assignment #4</a>
+              <a href="../asg5"> Assignment #5 </a>
+              <a href="../asg5/products.html"> Products </a>
+              <a href="../asg6/index.html"> Assignment #6 </a>
+              <a href="../asg6/jQweb/index.html"> Animal Crossing </a>
+              <a href="index.html"> Assignment #7 </a>
+              <a href="../final/products.html"> Final Project</a>
+        </nav>
+	<main>
+        <a href ="https://www.madlibs.com"><img src="images/madlibs.png " alt="madlibs" width="300" height="100"></a>
+    	<!-- Link to the form to a madlibs.php program to take the input and then outputs a funny story as an HTML page that will be displayed in the browser. -->		
+
+    	<!-- The input field should allow the user to enter three nouns, two adjectives, two verbs, and one number.
+     
+    		For example:
+    		·   Enter an adjective: purple
+    		·   Enter another adjective: ancient
+    		·   Enter a noun: bear
+    		·   Enter a verb: entered
+    		·   Enter another noun: dragon
+    		·   Enter a number: 3
+    		·   Enter a second verb: playing
+    		·   Enter third noun: cats -->
+    		
+        <form action="madlibs.php" method="post">
+            <p>Enter an adjective: <input type="text" name="adj1" /></p>
+            <p>Enter another adjective: <input type="text" name="adj2" /></p>
+            <p>Enter a noun: <input type="text" name="noun1" /></p>
+            <p>Enter a verb: <input type="text" name="verb1" /></p>
+            <p>Enter another noun: <input type="text" name="noun2" /></p>
+            <p>Enter a number: <input type="number" name="number" /></p>
+            <p>Enter a second verb: <input type="text" name="verb2" /></p>
+            <p>Enter a third noun: <input type="text" name="noun3" /></p>
+            <input type="submit" value="Create a story" />
+        </form>
+
+    </main>
+  
+   <footer>
+        Footer <br>
+        &copy; 2023 Subi Hwang
+    </footer>
+
+  </body>
+</html>

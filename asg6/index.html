@@ -1,0 +1,228 @@
+<!-- Web Development and Programming (CSCI-UA 61) - 001 
+Assignment 6 
+Subi Hwang  
+Nov 17, 2023 --> 
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="myscript.js"></script>
+</body></html>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Subi Hwang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+     <header>
+          <h1>Web Development and Programming</h1>         
+     </header>       
+       <nav>        
+              <a href="../index.html">Home</a>
+              <a href="../contact.html">Contact</a> <!-- part of Assignment #1 -->
+              <a href="../asg2/index.html">Assignment #2</a>
+              <a href="../asg3/index.html">Assignment #3</a>
+              <a href="../asg4/index.html">Assignment #4</a>
+              <a href="../asg5/index.html"> Assignment #5 </a>
+              <a href="../asg5/products.html"> Products </a>
+              <a href="index.html"> Assignment #6 </a>
+              <a href="jQweb/index.html"> Animal Crossing </a>
+              <a href="../asg7/index.html"> Assignment #7 </a>
+        </nav>
+    <main>
+
+<h1 id="special">jQuery (to be green)</h1>
+
+<div class="highlight"><strong> Part 1: Style application (to be highlighted)</strong> </div>
+<br>
+
+<img src='images/isabelle.png' width=200 height=200 id=isabelle>
+
+<p>Hi! </p>
+<p>My name is Isabelle:) </p>
+<p>How are you? </p>
+
+<br>
+<button id = "changeStyle">change style</button>
+<br>
+<br>
+
+<strong> Part 2: Image application</strong>
+
+<br>
+<br>
+<button id = "hide">Hide Isabelle</button>
+
+<button id = "show">Show Isabelle</button>
+<button id = "fadeOut">FadeOut Isabelle</button>
+<br>
+<br>
+
+<strong> Part 3: Animation application </strong>
+
+<button id = "animate"> Animate</button>
+<!-- <p> Click the button to increase the size of pink box (multiple clicking allowed)</p> -->
+<br>
+<br>
+<!-- 3a) The div should have a defined background-color, position set to absolute (to allow it to move), as well as defined height and width. All of these properties should be set using style from the start. -->
+
+<div id="animateDiv" style="background:pink; height:50px; width:50px; position:absolute; left:100%; transform: translateX(-100%);"></div>
+
+
+<br style="line-height: 120px;">
+
+<strong> Part 4: Username and Password application </strong><br><br>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username"><br>
+
+    <label for="password">Password:</label>
+    <input type="text" id="password" name="password"><br><br>
+
+    <div id="demo"></div>
+<br>
+<br>
+   <a href="https://animalcrossingworld.com/2020/02/250-high-resolution-animal-crossing-new-horizons-villager-special-character-renders/">Image by animalcrossingworld.com</a> 
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<br><br>
+<script> 
+$(function(){
+    // when document loads (ready)
+
+    // 1) Style application: Include a jQuery script to change the styles of the following elements when a button called Change styles is clicked:
+
+    // click on the changeStyle button
+    $("#changeStyle").click(function(){
+        
+        // a) Select the element <h1 id="special"> and change the text color to green.
+        $("#special").css("color", "green");  
+       
+        // b) Select the <div class="highlight"> and change the background color to yellow.   
+        $(".highlight").css("background-color", "yellow");
+
+        //to adjust the width of the highlight
+        $(".highlight").css("width", "310px"); 
+
+        // c) Use loops to manipulate all of the <p> elements in the document: Apply three styles to all of the <p> elements in the document, such as changing the color, background-color, width, and border properties.
+        
+        $("p").each(function(){
+            $(this).css("color", "#DDA0DD");      
+            $(this).css("background-color", "#FFE1E6"); 
+            $(this).css("border-style", "solid");
+
+            //to adjust the width of the border
+            $(this).css("width", "200px");   
+
+            // d) Use the alert function to display the HTML content for each of the <p> elements.
+                alert($(this).html())
+            });
+    });
+
+    // 2)Image application: Manipulate an image using jQuery:
+
+    // a) Add a hide button to hide the image when the user clicks on the button;
+    
+    // when you click on button with id=hide
+    $("#hide").click(function(){
+        // select image with id=isabelle and hide 
+        $("#isabelle").hide();
+    });
+    
+    // b) Add a show button to show the image when the user clicks on the button;
+    
+    // when you click on button with id=show
+    $("#show").click(function(){
+        // select image with id=isabelle and show 
+        $("#isabelle").show();
+    });
+
+    // c) Add a fadeOut button to fade out the image when the user clicks on the button (using at least one effect such as speed)
+
+    // when you click on button with id=fadeOut
+    $("#fadeOut").click(function(){
+        // select image with id=isabelle and fade Out in 3000 milliseconds (3 seconds)
+        $("#isabelle").fadeOut(3000);
+    });
+
+
+    // 3)Animation application: Create an animation associated with a div element.
+    // a) The div should have a defined background-color, position set to absolute (to allow it to move), as well as defined height and width. All of these properties should be set using style from the start. -> done above 
+    
+    // b) add an animate button to start the animation. The animation should be applied to the div, using opacity, moving the div 300px to the left, changing (increasing or decreasing) the width and height of the element every time the user clicks the button.
+    $('#animate').click(function() {
+    // animate the div using movement, opacity, hight and width
+            $("#animateDiv").animate({
+            opacity: '0.3',
+            left: '-=300px', 
+            height: '-=10px',
+            width: '-=10px'
+             });
+    });
+
+
+
+    // 4)Username and Password application: Create two text input fields, Username and Password. If the user enters a value, use the change event to do the following:
+
+  $("input").change(function () {
+        var isFilled = true;
+
+        $('#username, #password').css("background-color", "");
+
+        // b) If either of the elements is empty, change focus to the element, change the color of the input field to yellow and alert the user to input a value for that specific field.
+        if ($("#username").val() == '') {
+            $('#username').css("background-color", "yellow").focus();
+            alert('Please enter username.');
+            isFilled = false; //note: two alerts
+        }
+
+        else if ($("#password").val() == '') {
+            $('#password').css("background-color", "yellow");
+            if(isFilled) {
+                $('#password').focus();
+            }
+            alert('Please enter password.');
+            isFilled = false;
+        }
+
+        // a) make sure that the user entered a value for both fields
+        if (isFilled) {
+
+            // c) If the user entered values for both fields, display the value inside a <div id="demo"> element.
+            $('#demo').html('Username: ' + $("#username").val() + '<br>Password: ' + $("#password").val());
+        }
+    });
+
+
+});
+
+</script>
+    </main>
+   <footer>
+        Footer <br>
+        &copy; 2023 Subi Hwang
+    </footer>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

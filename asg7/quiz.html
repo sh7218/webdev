@@ -1,0 +1,93 @@
+
+<!-- Web Development and Programming (CSCI-UA 61) - 001 
+Assignment 7 
+Subi Hwang  
+Dec 03, 2023 -->
+
+<!-- quiz.html -->
+
+<!-- Online Quiz Application: Create a quiz.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Subi Hwang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+     <header>
+          <h1>Web Development and Programming</h1>         
+     </header>       
+       <nav>        
+              <a href="../index.html">Home</a>
+              <a href="../contact.html">Contact</a>
+              <a href="../asg2">Assignment #2</a>
+              <a href="../asg3">Assignment #3</a>
+              <a href="../asg4">Assignment #4</a>
+              <a href="../asg5"> Assignment #5 </a>
+              <a href="../asg5/products.html"> Products </a>
+              <a href="../asg6/index.html"> Assignment #6 </a>
+              <a href="../asg6/jQweb/index.html"> Animal Crossing </a>
+              <a href="index.html"> Assignment #7 </a>
+              <a href="../final/products.html"> Final Project</a>
+        </nav>
+    <main>
+
+        <h2>Quiz about South Korea</h2>
+
+        <!-- Link the quiz to a quiz.php program.  -->
+        <form action="quiz.php" method="post">
+
+        <!-- with a form for an online quiz about any topic with minimum of three questions, using multiple choice questions captured by radio buttons. Make sure to include the name for each element in the form. -->
+
+        <img src="images/seoul.jpg" alt="Seoul" width="300" height="240">
+
+        <p>1. What is the capital of South Korea?</p> 
+        <input type="radio" id="Busan" name="Q1" value="Busan">
+        <label for="Busan">Busan</label><br>
+        <input type="radio" id="Seoul" name="Q1" value="Seoul">
+        <label for="Seoul">Seoul</label><br>
+        <input type="radio" id="Incheon" name="Q1" value="Incheon">
+        <label for="Incheon">Incheon</label><br>
+
+        <img src="images/hanbok.jpg" alt="Hanbok" width="300" height="240">
+
+        <p>2. What is the traditional Korean clothes</p> 
+        <input type="radio" id="Hanbok" name="Q2" value="Hanbok">
+        <label for="Hanbok">Hanbok</label><br>
+        <input type="radio" id="Kimono" name="Q2" value="Kimono">
+        <label for="Kimono">Kimono</label><br>
+        <input type="radio" id="Cheongsam" name="Q2" value="Cheongsam">
+        <label for="Cheongsam">Cheongsam</label><br>
+
+        <img src="images/kimchi.jpg" alt="Kimchi" width="300" height="240">
+
+        <p>3. What is the name of the traditional Korean side dish?</p> 
+        <input type="radio" id="Sushi" name="Q3" value="Sushi">
+        <label for="Sushi">Sushi</label><br>
+        <input type="radio" id="Kimchi" name="Q3" value="Kimchi">
+        <label for="Kimchi">Kimchi</label><br>
+        <input type="radio" id="Tempura" name="Q3" value="Tempura">
+        <label for="Tempura">Tempura</label><br>
+
+        <input type="submit" value="Submit Quiz">
+        </form>
+    </main>
+  
+   <footer>
+        Footer <br>
+        &copy; 2023 Subi Hwang
+    </footer>
+
+  </body>
+</html>
+
+
+
+
+
+
+

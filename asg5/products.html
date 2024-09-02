@@ -1,0 +1,247 @@
+<!-- Web Development and Programming (CSCI-UA 61) - 001 
+Assignment 5 
+Subi Hwang  
+Nov 6, 2023 --> 
+
+<!-- Part #1: Simple Shopping cart application (products.html): Using EventListener() method and events (focusing on submit and change), and the DOM’s forms[ ] and elements[ ] array collection objects to validate a form. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Subi Hwang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+     <header>
+          <h1>Web Development and Programming</h1>         
+     </header>       
+          <nav>      	
+              <a href="../index.html">Home</a>
+              <a href="../contact.html">Contact</a> <!-- part of Assignment #1 -->
+              <a href="../asg2/index.html">Assignment #2</a>
+              <a href="../asg3/index.html">Assignment #3</a>
+              <a href="../asg4/index.html">Assignment #4</a>
+              <a href="index.html"> Assignment #5 </a>
+              <a href="products.html"> Products </a>
+              <a href="../asg6/index.html"> Assignment #6 </a>
+              <a href="../asg6/jQweb/index.html"> Animal Crossing </a>
+              <a href="../asg7/index.html"> Assignment #7 </a>
+        </nav>
+	<main>
+        <h2> Nook’s Cranny </h2>
+        <img src='items/Nook.png' width=200 height=200 id=nook>
+        <p> Please choose the number of items you want to buy, then the subtotal and the grand total will be displayed. <br>
+        Then enter your information and click the checkout to see your receipt. 
+        	<div class="container">
+			        <form action="#" novalidate>
+			      
+			        <img src='items/cherry.png' width=50 height=50 id=cherry>
+					<p>Cherry - <input type=number id=cherryPrice value=500 readonly> bells<br>Quantity Ordered <input type="number" name="qt1" id="qt1"></p>
+
+					<p>Sub-total</p> <div id=subTotal1></div>
+
+				    <img src='items/coconut.png' width=50 height=50 id=coconut>
+		
+					<p>Coconut - <input type=number id=coconutPrice value=250 readonly> bells<br>Quantity Ordered <input type="number" name="qt2" id="qt2"></p>
+
+					<p>Sub-total</p><div id=subTotal2></div>
+
+					<img src='items/acorn.png' width=50 height=50 id=acorn>	 	
+					<p>Acorn - <input type=number id=acornPrice value=200 readonly> bells<br>Quantity Ordered <input type="number" name="qt3" id="qt3"></p>
+
+					<p>Sub-total</p><div id=subTotal3></div>
+
+<div class="row">
+	<div class="col-25">
+     		<label for="ShippingMethod">Shipping Method</label><br>
+   		 </div>
+
+   		 <div class="col-50">
+    	 	<input name="ShippingMethod" type="radio" value="will-call" >
+			  <label for="will-call">will-call</label><br>
+
+			  <input name="ShippingMethod" type="radio" value="shipping" >
+			  <label for="shipping">shipping</label><br>
+   		 </div>
+     </div>
+	
+	<div class="row">
+
+   	 	<div class="col-25">
+     		<label for="shippingAmount">Shipping amount:</label><br>
+   		 </div>
+
+   		 <div class="col-50">
+    	 	<input type=number id = shippingAmount name= shippingAmount><p>
+   		 </div>
+
+     </div>
+		<p>Grand Total</p><div id=grandTotal></div>	
+
+	<div class="row">
+
+   	 	<div class="col-25">
+     		<label for="firstname">First Name</label>
+   		 </div>
+
+   		 <div class="col-50">
+    	 	<input type="text" id="firstname" name="firstname" placeholder="Your fist name..">
+   		 </div>
+
+     </div>
+
+<div class="row">
+
+    	<div class="col-25">
+      		<label for="lname">Last Name</label>
+    	</div>
+
+    	<div class="col-50">
+      		<input type="text" id="lastname" name="lastname" placeholder="Your last name..">
+    	</div>
+  	</div>
+
+
+  	<div class="row">
+
+    	<div class="col-25">
+      		<label for="phone">Phone number:</label><br>
+    	</div>
+
+    	<div class="col-50">
+      		<input type="text" name="phoneNumber" ><br><br>
+    	</div>
+  	</div>
+
+<div class="row">
+
+    	<div class="col-25">
+      		<label for="email">Email:</label><br>
+    	</div>
+
+    	<div class="col-50">
+      		<input type=email name=email required><p>
+    	</div>
+  	</div>
+		
+
+		<div class="row">
+
+    	<div class="col-25">
+      		<label for="address">Address:</label><br>
+    	</div>
+
+    	<div class="col-50">
+      		<input type="text" id="address" name="address" required><br>
+    	</div>
+  	</div>	
+
+		<div class="row">
+
+    	<div class="col-25">
+      		<label for="zip">Zip Code:</label><br>
+    	</div>
+
+    	<div class="col-50">
+      		<input type=number name=zip required><p>
+    	</div>
+  	</div>	
+	 	
+			  
+			  
+		<div class="row">
+
+    	<div class="col-25">
+      		<label for="cardName">Credit Card Name:</label><br>
+    	</div>
+
+    	<div class="col-50">
+      		<input type="text" id="cardName" name="cardName" required><br>
+    	</div>
+  	</div>		 
+			  
+	
+	<div class="row">
+
+    	<div class="col-25">
+      		<label for="cardName">Credit Card Company:</label><br>
+    	</div>
+
+    	<div class="col-50">
+      		  <select name=creditCardCompany><p>
+			      <option value="Visa" selected>Visa</option>
+			      <option value="MasterCard">MasterCard</option>
+			      <option value="Amex">Amex</option>
+				  <option value="Discover">Discover</option>
+			      <option value="JCB">JCB</option>
+		      </select>
+		      <p>  
+    	</div>
+  	</div>		  
+
+			 
+<div class="row">
+
+    	<div class="col-25">
+      		<label for="cardNumber">Credit Card Number:</label><br>
+    	</div>
+
+    	<div class="col-50">
+      		<input type="text" id="cardNumber" name="cardNumber" required pattern="[0-9]{16}"><br> 
+
+    	</div>
+  	</div>		
+		  
+			          	
+		<div class="row">
+
+    	<div class="col-25">
+      		<label for="cardExpiration">Expiration Date (MM/YY):</label><br>
+    	</div>
+
+    	<div class="col-50">
+      		<input type="text" id="cardExpiration" name="cardExpiration" pattern="[0-9]{2}/[0-9]{2}" placeholder="MM/YY" required placeholder="MM/YY">
+
+
+    	</div>
+  	</div>		  
+			  
+			  
+	<div class="row">
+
+    	<div class="col-25">
+      		<label for="cardCvv">CVV:</label><br>
+    	</div>
+
+    	<div class="col-50">
+      		<input type="text" id="cardCvv" name="cardCvv" required pattern="[0-9]{3}"><br>
+    	</div>
+  	</div>		  
+			  		  		  
+			<!-- <p>Click "submit" to validate and display output (Receipt) inside element with id=demo or inside a new document.</p> -->
+
+			
+			 <img src='timmy-tommy.webp' width=150 height=150 id=timmy-tommy>
+
+			 <div class="row">
+ 		<input type="reset" id="reset" name="reset" value="Reset">
+	    <input type="submit" id="submit" name="submit" value="checkout">
+	  </div>
+			 <p>Click "Submit" button to make an order and the online receipt will be available</p>
+			 <hr>
+			    <a href="https://animalcrossingprices.com">Image by animalcrossingprices.com</a> 	 
+	            <a href="https://nintendo.fandom.com/wiki/Animal_Crossing:_New_Horizons/gallery">and from nintendo.com</a> on Nintendo
+			</form>
+		</div>
+    </main>
+
+    <script src="asg5cart.js"></script>
+   <footer>
+        Footer <br>
+        &copy; 2023 Subi Hwang
+    </footer>
+
+  </body>
+</html>

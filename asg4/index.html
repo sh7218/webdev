@@ -1,0 +1,64 @@
+<!-- Web Development and Programming (CSCI-UA 61) - 001 
+Assignment 4 
+Subi Hwang  
+Oct 29, 2023 --> 
+
+<!-- HTML and CSS Requirements (10%):
+
+Create a folder for this assignment called asg4. Create an index.html inside this folder. 
+This index.html should have responsive header, footer, navigation similar to assignment #1.
+Make sure to include a responsive external .css similar to assignment # 1 (you can even use the same .css file as you used for assignment #1.
+Link to this assignment from the main index.html which you created for assignment 1.
+The link would be as follow: <a href=”asg4”>assignment # 4</a>
+Make sure to place all files related to this assignment inside the asg4 folder. -->
+
+<!-- How it should work: Your user should be prompted to enter  their birthday through a form input field with type=date.  Your application should tell the user their sign, a fortune cookie and also a picture of their sign.  -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Subi Hwang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+     <header>
+          <h1>Web Development and Programming</h1>         
+     </header>       
+          <nav>      	
+              <a href="../index.html">Home</a>
+              <a href="../contact.html">Contact</a> <!-- part of Assignment #1 -->
+              <a href="../asg2/index.html">Assignment #2</a>
+              <a href="../asg3/index.html">Assignment #3</a>
+              <a href="index.html">Assignment #4</a>
+              <a href="../asg5/index.html"> Assignment #5 </a>
+              <a href="../asg5/products.html"> Products </a>
+              <a href="../asg6/index.html"> Assignment #6 </a>
+              <a href="../asg6/jQweb/index.html"> Animal Crossing </a>
+              <a href="../asg7/index.html"> Assignment #7 </a>
+        </nav>
+    
+	<main>
+        <h2>Zodiac Signs Applications</h2>
+        <p> Enter your birthday to see zodiac signs <br>
+            Enter the date: <input type=date id="mydate"> </p>
+
+            <button onclick="sign()"> Click to display zodiac signs </button>
+            <hr>
+
+            <textarea readonly>Display zodiac signs here!</textarea>
+            <p id="display"> Display the picture of the sign here! </p>
+            <hr>
+            <a href="https://www.freepik.com/free-vector/abstract-social-media-posts-doodle-design-zodiac-graphic-set-vector_20776461.htm#query=zodiac&position=2&from_view=keyword&track=sph">Image by rawpixel.com</a> on Freepik
+    </main>
+
+    <script src="sign.js"></script>
+  
+   <footer>
+        Footer <br>
+        &copy; 2023 Subi Hwang
+    </footer>
+
+  </body>
+</html>

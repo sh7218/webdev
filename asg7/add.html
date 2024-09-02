@@ -1,0 +1,66 @@
+<!-- Web Development and Programming (CSCI-UA 61) - 001 
+Assignment 7 
+Subi Hwang  
+Dec 03, 2023 -->
+
+<!-- add.html -->
+
+<!-- Calculator Application: 
+Create a simple HTML (add.html) with form with three input fields, a submit button, and a reset button: -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Subi Hwang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+     <header>
+          <h1>Web Development and Programming</h1>         
+     </header>       
+       <nav>        
+              <a href="../index.html">Home</a>
+              <a href="../contact.html">Contact</a>
+              <a href="../asg2">Assignment #2</a>
+              <a href="../asg3">Assignment #3</a>
+              <a href="../asg4">Assignment #4</a>
+              <a href="../asg5"> Assignment #5 </a>
+              <a href="../asg5/products.html"> Products </a>
+              <a href="../asg6/index.html"> Assignment #6 </a>
+              <a href="../asg6/jQweb/index.html"> Animal Crossing </a>
+              <a href="index.html"> Assignment #7 </a>
+              <a href="../final/products.html"> Final Project</a>
+        </nav>
+    <main>
+        <img src="images/calculator.jpg" alt="calculator" width="300" height="240">
+        <h2>Simple Calculator</h2>
+
+        <!-- Link the form to a PHP program called add.php. -->
+        <form action="add.php" method="post">
+        <!-- You need to have two fields to input the numbers that you want to add, and one field to input or select the operator. -->
+        <p>Enter the first number: <input type="number" step="0.01" name="num1" /></p>
+        <p>Enter the second number: <input type="number" step="0.01" name="num2" /></p>
+        <p>Choose an operator:
+
+         <!-- The operator can be a selection menu or a radio button to select the basic mathematical operators: +, –, *, or /. -->
+            <select name="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+        </p>
+        <input type="submit" value="Calculate" />
+        <input type="reset" value="Reset" />
+        </form>  
+    </main>
+  
+    <footer style = "margin-top: 60px;">
+        Footer <br>
+        &copy; 2023 Subi Hwang
+    </footer>
+
+  </body>
+</html>

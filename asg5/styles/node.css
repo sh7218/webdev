@@ -1,0 +1,48 @@
+/*Web Development and Programming (CSCI-UA 61) - 001 
+Assignment 4
+Subi Hwang
+Nov 6, 2023 
+*/
+
+body {
+    background-color: white;
+    font-family: 'Futura', sans-serif;
+    margin: 0; 
+    padding: 0;}
+
+ul {
+    background-color: #584f4d;
+    border:none;
+    padding: 0;
+    margin: 0;}
+
+li {
+    background-color: #FFC0CB;
+    color: #fff;
+    border-top: 1px FFC0CB;
+    border-bottom: 1px solid lightcoral;
+    font-size: 24px;
+    letter-spacing: .05em;
+    list-style-type: none;
+    text-shadow: 2px 2px 1px #9f593f;
+    height: 50px;
+    padding-left: 1em;
+    padding-top: 10px;}
+
+.blue {
+    background-color: #99CCFF;
+    color: #fff;
+    text-shadow: 2px 2px 1px #3b6a5e;
+    border-top: 1px solid #7ee0c9;
+    border-bottom: 1px solid #3b6a5e;}
+
+p {
+    color: #403c3b; 
+    background-color: lightgrey;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    margin: 20px auto 20px auto;
+    min-width: 20%; 
+    max-width: 80%; }
+}

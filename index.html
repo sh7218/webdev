@@ -1,0 +1,75 @@
+<!-- Web Development and Programming (CSCI-UA 61) - 001 
+Assignment 1
+Subi Hwang
+Sep 17, 2023 -->
+
+<!-- 1)(35% of the grade) Create index.html (Homepage for the course): 
+Create your homepage or landing page for this course (index.html):  The index.html is the opening page for every website or project.
+
+The homepage (index.html) should be placed inside the public_html folder as this should represent the course main webpage. If you have multiple courses that use i6 (ignore this section if you don’t), follow these instructions to setup another index for this course:
+If you have multiple CS courses that requires the use of i6 account, then you must create a new folder called webdev and place all your documents for the course inside this folder. This folder should be placed inside public_html and would be used as your primary folder to host all your work for this class.
+Then, you need to place an index.html inside the webdev folder and this will be your landing or home page for this course and should include all of the requirements listed in this assignment.
+You should also add a link from the main public_html index.html to the webdev folder.
+The link should look like this: 
+ <a href=”webdev”> Web development and Programing class Work <a> 
+
+ -> index.html placed in webdev folder which is inside of public_html
+
+Include navigation menu which should include a home, and links to assignment 1 to 3 and a contact link as well (most of the links don’t have to work for now as you will add them when you create these assignments later on), a paragraph about yourself and indicate why you are taking this class, image of yourself (you can distort if you want), a header and a footer for the page using any tag such as div or h1.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Subi Hwang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+  	<!-- a header and a footer for the page using any tag such as div or h1. -->
+     <header>
+          <h1>Web Development and Programming</h1>
+            <p>Assignment #1</p>
+     </header>       
+          <!-- Include navigation menu which should include a home, and links to assignment 1 to 3 and a contact link as well (most of the links don’t have to work for now as you will add them when you create these assignments later on) -->
+          <nav>      	
+              <a href="index.html">Home</a>
+              <a href="contact.html">Contact</a> <!-- part of Assignment #1 -->
+              <a href="asg2">Assignment #2</a>
+              <a href="asg3">Assignment #3</a>
+              <a href="asg4">Assignment #4</a>
+              <a href="asg5"> Assignment #5 </a>
+              <a href="asg5/products.html"> Products </a>
+              <a href="asg6/index.html"> Assignment #6 </a>
+              <a href="asg6/jQweb/index.html"> Animal Crossing </a>
+              <a href="asg7"> Assignment #7 </a>
+              <a href="final/products.html"> Final Project</a>
+        </nav>
+    
+	<!-- image of yourself (you can distort if you want)-->
+          <figure>
+            <a href="index.html" title="Access the Home Page">
+            <img src="images/subi.JPG" alt="Subi Hwang in New York" width="1000" height="667">
+            </a>
+        </figure>
+	<main>
+        <!-- a paragraph about yourself and indicate why you are taking this class, -->
+        <h2>About Myself</h2>
+            <p> My name is Subi Hwang, and I am from South Korea. I am majoring in Computer Science and minoring in Web Programming and Applications at NYU. One of my interests is visiting cafés and restaurants. I also enjoy traveling different contries where I can experience various places and cultures. I am taking CSCI-UA 61 course to enhance my web programming skills and to expand my knowlege that I acquired from the previous course (CSCI-UA 4).</p>
+
+        <h3>♫⋆｡♪ ₊˚♬ ﾟ Rainy Days at New York University ♫⋆｡♪ ₊˚♬ ﾟ.</h3>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/180ysvIh6kU?si=CSj2eXQ6Q4ohV2z8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <br>
+    
+    </main>
+  
+   <!-- a header and a footer for the page using any tag such as div or h1. -->
+   <footer>
+        Footer <br>
+        &copy; 2023 Subi Hwang
+    </footer>
+
+  </body>
+</html>
